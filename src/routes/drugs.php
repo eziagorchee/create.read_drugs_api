@@ -21,12 +21,12 @@ function create_drug(Request $request, Response $response)
         $db = new db(); //Create the db Object
         $pdo = $db->connect();
 
-        $sql = "INSERT INTO drugs (name, type, vendor, price, size, product_id, constituents, dispensed_in, description, image_url) VALUES (?,?,?,?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE id = ?, name = ?, type = ?, vendor = ?, price = ?, size = ?, product_id = ?, constituents = ?, dispensed_in = ?, description = ?,image_url = ? ";
+        $sql = "INSERT INTO drugs (name, type, vendor, price, size, product_id, constituents, dispensed_in, description, image_url) VALUES (?,?,?,?,?,?,?,?,?,?) ";
         // Connect to the database
         $stmt = $pdo->prepare($sql); //Prepare the Query
         //Execute the Query
         foreach ($body as $value) {
-            $stmt->execute([$value['name'], $value['type'], $value['vendor'], $value['price'], $value['size'], $value['product_id'], $value['constituents'], $value['dispensed_in'], $value['description'], $value['image_url'], $value['id'], $value['name'], $value['type'], $value['vendor'], $value['price'], $value['size'], $value['product_id'], $value['constituents'], $value['dispensed_in'], $value['description'], $value['image_url']]);
+            $stmt->execute([$value['name'], $value['type'], $value['vendor'], $value['price'], $value['size'], $value['product_id'], $value['constituents'], $value['dispensed_in'], $value['description'], $value['image_url']]);
         }
         //After Executing, Reset the PDO variable
         $pdo = null;
