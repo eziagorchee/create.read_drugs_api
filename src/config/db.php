@@ -1,10 +1,6 @@
 <?php
 class db{
     public function connect(){
-        // $host = "localhost";
-        // $user = "root";
-        // $pass = "";
-        // $dbname = "droh-health";
 
         $host = "d6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
         $user = "q0v6mbhsskzgc8zz";
@@ -22,6 +18,5 @@ class db{
 
         return $pdo;
 
-        // mysql://:@:3306/bwsw7obf8qezy3ih
     }
 }
