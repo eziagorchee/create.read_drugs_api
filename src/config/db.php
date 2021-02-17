@@ -1,10 +1,10 @@
 <?php
 class db{
     public function connect(){
-        $host = "localhost";
-        $user = "root";
-        $pass = "";
-        $dbname = "droh-health";
+        $host = "d6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        $user = "q0v6mbhsskzgc8zz";
+        $pass = "tf0kl6i2y1s5d8dx";
+        $dbname = "bwsw7obf8qezy3ih";
 
 
         //Connect Database using PHP PDO CRUD
